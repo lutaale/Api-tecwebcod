@@ -1,6 +1,6 @@
 
-import { express } from "express";
-import { cors } from 'cors'
+import  express  from "express";
+import  cors  from 'cors'
 import route from "./router";
 
 
@@ -14,11 +14,10 @@ class App {
     middlewares() {
         //cors serve para definir limitações de uso da api criada
         this.server.use(cors());
-
         this.server.use(express.json());
 
     }
-    routes() {
+    route() {
         this.server.use(route);
     }
 }
