@@ -6,7 +6,7 @@ class NodemailerController {
         const { nome, email, telefone, descricao, tipoprojeto } = req.body
 
         //   let acoont = await nodemailer.createTestAccount()
-        let transporter = nodemailer.createTransport({
+        let transporter = await nodemailer.createTransport({
             host: 'smtp.gmail.com',
             port: "465",
             secure: false,
@@ -29,6 +29,8 @@ class NodemailerController {
             </div>
             `
         })
+
+        return res.json(send)
     }
 }
 
