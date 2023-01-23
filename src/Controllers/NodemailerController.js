@@ -7,10 +7,9 @@ class NodemailerController {
         const { nome, email, telefone, descricao, tipoprojeto } = req.body
 
         //   let acoont = await nodemailer.createTestAccount()
-        let transporter = await nodemailer.createTransport({
+        let transporter =  nodemailer.createTransport({
             host: 'smtp.gmail.com',
             port: "465",
-            secure: false,
             auth: {
                 user: 'tecwebcod@gmail.com',
                 pass: 'XKzdtdynrusnfjpf'
