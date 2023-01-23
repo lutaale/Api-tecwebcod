@@ -7,7 +7,7 @@ class NodemailerController {
 
         //   let acoont = await nodemailer.createTestAccount()
         let transporter = nodemailer.createTransport({
-            host: 'http://smtp.gmail.com/',
+            host: 'smtp.gmail.com',
             port: "465",
             secure: false,
             auth: {
