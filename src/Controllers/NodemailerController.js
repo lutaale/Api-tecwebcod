@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer')
 
+
 class NodemailerController {
     async post(req, res) {
 
